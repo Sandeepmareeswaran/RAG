@@ -1,12 +1,15 @@
 # ============================================================
 # RAG Learning Project - Requirements
-# Python 3.10+ recommended
+# Python 3.10+ recommended | Tested on LangChain 1.4.3
 # ============================================================
 
 # Core LangChain ecosystem
 langchain>=0.2.0
-langchain-community>=0.2.0
-langchain-ollama>=0.1.0
+langchain-core
+langchain-text-splitters      # RecursiveCharacterTextSplitter
+langchain-ollama              # OllamaLLM + OllamaEmbeddings
+langchain-chroma              # Chroma vector store (standalone)
+langchain-community           # TextLoader and other loaders
 
 # Vector Store
 chromadb>=0.5.0
