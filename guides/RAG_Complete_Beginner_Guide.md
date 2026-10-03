@@ -219,7 +219,7 @@ Tries to split on natural language boundaries in order:
 - Character by character (last resort)
 
 ```python
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 splitter = RecursiveCharacterTextSplitter(
     chunk_size=800,       # max characters per chunk
@@ -230,7 +230,7 @@ splitter = RecursiveCharacterTextSplitter(
 #### 2. CharacterTextSplitter
 Simple split on a specific character (e.g., `\n\n`):
 ```python
-from langchain.text_splitter import CharacterTextSplitter
+from langchain_text_splitters import CharacterTextSplitter
 
 splitter = CharacterTextSplitter(
     separator="\n\n",
@@ -242,7 +242,7 @@ splitter = CharacterTextSplitter(
 #### 3. TokenTextSplitter
 Splits by token count (more precise for LLM context limits):
 ```python
-from langchain.text_splitter import TokenTextSplitter
+from langchain_text_splitters import TokenTextSplitter
 
 splitter = TokenTextSplitter(
     chunk_size=256,   # tokens, not characters
@@ -253,7 +253,7 @@ splitter = TokenTextSplitter(
 #### 4. MarkdownHeaderTextSplitter
 Splits markdown by heading structure (great for documentation):
 ```python
-from langchain.text_splitter import MarkdownHeaderTextSplitter
+from langchain_text_splitters import MarkdownHeaderTextSplitter
 
 headers_to_split_on = [
     ("#", "Header 1"),
@@ -407,7 +407,7 @@ ChromaDB is perfect for learning because:
 - Fast enough for thousands of chunks
 
 ```python
-from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma  # Or: from langchain_chroma import Chroma
 from langchain_ollama import OllamaEmbeddings
 
 # Create & persist vector store

@@ -13,10 +13,15 @@ RAG_Learning/
 ├── 📓 notebooks/
 │   └── RAG_Complete_Practical.ipynb   ← Main Jupyter notebook (START HERE)
 ├── 📊 data/
-│   ├── as_a_man_thinketh.txt          ← Downloaded automatically by notebook
+│   ├── as_a_man_thinketh.pdf          ← Complete 32-page book in PDF format
+│   ├── as_a_man_thinketh.txt          ← Plain text format (Project Gutenberg)
 │   └── chroma_db/                     ← Created automatically (vector database)
 ├── 📚 guides/
-│   └── RAG_Complete_Beginner_Guide.md ← Complete learning guide
+│   ├── RAG_Complete_Beginner_Guide.pdf ← 20-page complete PDF learning manual & guide
+│   └── RAG_Complete_Beginner_Guide.md  ← Markdown version
+├── 🛠️ scripts/
+│   ├── generate_book_pdf.py           ← Generates the book PDF
+│   └── generate_guide_pdf.py          ← Generates the 20-page guide PDF
 ├── ⚙️ setup/
 │   └── OLLAMA_SETUP.md                ← How to install Ollama
 └── requirements.txt                   ← Python packages needed
@@ -118,15 +123,23 @@ Once the chat loop is running, try these:
 
 ---
 
-## 📚 Full Guide
+## 📚 Full Learning Manual & Architecture Guide
+The complete beginner guide is provided in both **PDF** and **Markdown** formats:
+- 📄 **PDF Manual:** [`guides/RAG_Complete_Beginner_Guide.pdf`](guides/RAG_Complete_Beginner_Guide.pdf) — 20-page beautifully formatted document ready for offline reading and printing.
+- 📝 **Markdown Guide:** [`guides/RAG_Complete_Beginner_Guide.md`](guides/RAG_Complete_Beginner_Guide.md)
 
-Read `guides/RAG_Complete_Beginner_Guide.md` for the complete explanation of:
-- What RAG is and why it was invented
-- How chunking, embeddings, and vectors work
-- Complete glossary of all terms
-- Common mistakes to avoid
-- How to tune your RAG system
-- What to learn next (roadmap)
+**Topics Covered in Depth:**
+- What RAG is, why it was invented, and how it solves hallucination
+- Stage-by-stage visual architecture diagrams
+- What is Chunking, why overlap matters, and splitting strategies
+- Embeddings: mathematical vectors, semantic similarity, high-dimensional spaces
+- Vector Stores: ChromaDB internals and indexing algorithms (HNSW)
+- Semantic Retrieval: Top-K similarity, MMR, and score thresholds
+- LLM Integration & Prompt Engineering for grounded answers
+- Step-by-step LangChain LCEL pipeline assembly
+- Complete glossary of all AI/RAG terms
+- Common beginner mistakes and troubleshooting playbook
+- RAG tuning checklist and advanced production roadmap
 
 ---
 
